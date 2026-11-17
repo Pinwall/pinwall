@@ -63,7 +63,7 @@ footer{margin-top:26px;font-size:.85rem;text-align:center;display:grid;gap:4px}
 <body>
 <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
 <div class="wrap"><div id="app"></div><footer class="mute"><span>Support: <a href="tel:+17828127660">+1 (782) 812-7660</a></span></footer></div>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script>
 const LINK='https://whatsapp.com/channel/0029Vb9NioC6rsQjxph1DE0E';
 const TIERS=[[200,500],[100,350],[50,200],[0,100]];
@@ -85,7 +85,7 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const N=n=>'₦'+Number(n).toLocaleString('en-NG');
 const uid=()=>Math.random().toString(36).slice(2,10);
-const SB_URL='https://tayoqcwiesgoxhesxwiz.supabase.co',SB_KEY='sb_publishable_PvSZ0WbW-e8qz-JDzaOAyQ_36ydHMVw';
+const SB_URL='https://tayoqcwiesgoxhesxwiz.supabase.co',SB_KEY='sb_publishable_2lduapMlO2xyLbQBGCLEXA_io-nNhUF';
 if(SB_URL.startsWith('PASTE')){document.getElementById('app').innerHTML='<div class="glass pad"><h3>Almost there</h3><p class="mute" style="margin:0">Add your Supabase URL and key at the top of this file, then reload.</p></div>';throw Error('Supabase is not configured')}
 const db=supabase.createClient(SB_URL,SB_KEY);
 let S={users:[],subs:[],pays:[],feed:[],me:null},ui={tab:'task',mode:'up',msg:''};
