@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pinwall: Earn money posting ads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#dff7ee;--bg2:#ffe9cc;--ink:#0b2b27;--mute:#3f6760;--in:rgba(255,255,255,.45);--edge:rgba(255,255,255,.75);--sh:0 20px 50px rgba(20,70,60,.18);--acc:#25D366;--acc-ink:#fff;--o1:#34e0b4;--o2:#ffb454;--o3:#ff7c6b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#03211f;--bg2:#190f2e;--ink:#e9fff8;--mute:#93c7ba;--in:rgba(255,255,255,.08);--edge:rgba(255,255,255,.2);--sh:0 20px 50px rgba(0,0,0,.5);--acc:#25D366;--acc-ink:#fff}}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;background:linear-gradient(160deg,var(--bg1),var(--bg2));color:var(--ink);font:16px/1.55 Figtree,system-ui,sans-serif;overflow-x:hidden}
+.orb{position:fixed;border-radius:50%;filter:blur(70px);opacity:.7;z-index:-1;animation:drift 24s ease-in-out infinite alternate}
+.o1{width:46vmax;height:46vmax;background:var(--o1);top:-14vmax;left:-10vmax}
+.o2{width:38vmax;height:38vmax;background:var(--o2);bottom:-12vmax;right:-8vmax;animation-delay:-9s}
+.o3{width:24vmax;height:24vmax;background:var(--o3);top:42%;left:58%;animation-delay:-15s;opacity:.45}
+@keyframes drift{to{transform:translate(6vmax,-4vmax) scale(1.12)}}
+a{color:var(--acc);font-weight:600}
+.wrap{max-width:600px;margin:0 auto;padding:18px 16px 50px}
+header{display:flex;align-items:center;justify-content:center;gap:10px;font:800 1.6rem 'Bricolage Grotesque',Figtree,sans-serif;padding:20px 0 30px}
+header i{width:32px;height:32px;border-radius:50% 50% 50% 7px;background:linear-gradient(135deg,var(--o1),var(--o2));box-shadow:inset 0 1px 0 #fff9,0 4px 14px rgba(0,0,0,.2)}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;letter-spacing:-.025em;line-height:1.08;margin:0 0 10px;text-align:center}
+h1{font-size:2.2rem;font-weight:800}
+p{text-align:center;color:var(--mute);font-size:1.1rem}
+.glass{background:linear-gradient(140deg,rgba(255,255,255,.6),rgba(255,255,255,.2));-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px);border:1px solid var(--edge);border-radius:24px;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),var(--sh);padding:30px 20px}
+label{display:grid;gap:8px;font-weight:600;font-size:.95rem;margin-bottom:20px;text-align:left}
+input{font:inherit;color:var(--ink);background:var(--in);border:1px solid var(--edge);border-radius:14px;padding:14px;width:100%;font-size:1.1rem}
+input:focus{outline:3px solid var(--acc);outline-offset:2px}
+.btn{display:flex;justify-content:center;align-items:center;gap:10px;font:700 1.1rem Figtree,sans-serif;border:0;border-radius:999px;padding:16px;width:100%;background:var(--acc);color:var(--acc-ink);cursor:pointer;box-shadow:0 8px 22px rgba(37,211,102,.4);transition:transform .1s}
+.btn:active{transform:scale(.98)}
+.btn svg{width:24px;height:24px;fill:currentColor}
+.steps{text-align:left;margin:30px 0 0;padding-left:1.2rem;display:grid;gap:10px;color:var(--ink);font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+
+<div class="wrap">
+    <header><i></i>Pinwall</header>
+    
+    <h1>Post an ad.<br>Get paid.</h1>
+    <p>Earn up to ₦500 per WhatsApp group. No login required. Start instantly.</p>
+
+    <div class="glass" style="margin-top: 30px;">
+        <form id="waForm">
+            <label>
+                Enter your Real Name:
+                <input type="text" id="realName" placeholder="e.g. Samuel Kelvin" required>
+            </label>
+            <button type="submit" class="btn">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                Start Task on WhatsApp
+            </button>
+        </form>
+
+        <ol class="steps">
+            <li>We open WhatsApp with your name.</li>
+            <li>We send you the ad and instructions.</li>
+            <li>You post it in a group and send us the screenshots.</li>
+            <li>You get paid immediately.</li>
+        </ol>
+    </div>
+</div>
+
+<script>
+document.getElementById('waForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get the name the user typed
+    const name = document.getElementById('realName').value.trim();
+    
+    // Your WhatsApp Number (Replace this with your actual number, include country code, no plus sign)
+    const myNumber = "17828127660"; 
+    
+    // The message you want to pre-fill
+    const message = `Hello Admin! My real name is *${name}*. I want to start the task. Please send me the ad and instructions.`;
+    
+    // Encode the message for the URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Create the WhatsApp link
+    const waLink = `https://wa.me/${myNumber}?text=${encodedMessage}`;
+    
+    // Redirect the user to WhatsApp
+    window.location.href = waLink;
+});
+</script>
+</body>
+</html>
