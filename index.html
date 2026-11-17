@@ -85,7 +85,7 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const N=n=>'₦'+Number(n).toLocaleString('en-NG');
 const uid=()=>Math.random().toString(36).slice(2,10);
-const SB_URL='https://tayoqcwiesgoxhesxwiz.supabase.co',SB_KEY='sb_publishable_PvSZ0WbW-e8qz-JDzaOAyQ_36ydHMVw';
+const SB_URL='https://tayoqcwiesgoxhesxwiz.supabase.co',SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZobWN6em10ampibGRzZ3BiZ3ZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQ5MTMzNzksImV4cCI6MjExMDQ4OTM3OX0.59t8YvlrwxEf1ncOy4HmQ6lKE-xR7G_2rjXuRCVrMKo';
 if(SB_URL.startsWith('PASTE')){document.getElementById('app').innerHTML='<div class="glass pad"><h3>Almost there</h3><p class="mute" style="margin:0">Add your Supabase URL and key at the top of this file, then reload.</p></div>';throw Error('Supabase is not configured')}
 const db=supabase.createClient(SB_URL,SB_KEY);
 let S={users:[],subs:[],pays:[],feed:[],me:null},ui={tab:'task',mode:'up',msg:''};
